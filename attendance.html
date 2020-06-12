@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Attendance Manager</title>
-    <link rel="stylesheet" type = "text/css" href="attendance.css">
+    <link rel="stylesheet" type="text/css" href="attendance.css" />
     <script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-</head>
-<body>
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div id="container">
-        <h1>Attendance</h1>
-    
-        <ol>
-            <li>Payas Jain <button id="present">Present</button><button id="absent">absent</button></li>
-            <li>Sushant Mahajan <button id="present">Present</button><button id="absent">absent</button></li>
-            <li>Saksham Jain <button id="present">Present</button><button id="absent">absent</button></li>    
-        </ol>  
-        <button>Submit</button>  
-        <button>Edit</button>
-        <button>View Attendance</button>
-    </div>
-    
-    <script type="text/javascript" src="attendance.js"></script>
-</body>
+      <h1>Attendance</h1>
 
+      <ol>
+        <li id="member-0">
+          Payas Jain <button id="present-0">Present</button
+          ><button id="absent">absent</button>
+        </li>
+        <li id="member-1">
+          Sushant Mahajan <button id="present-1">Present</button
+          ><button id="absent">absent</button>
+        </li>
+        <li>
+          Saksham Jain <button id="present">Present</button
+          ><button id="absent">absent</button>
+        </li>
+      </ol>
+      <button>Submit</button>
+      <button>Edit</button>
+      <button>View Attendance</button>
+    </div>
+
+    <script type="text/javascript" src="attendance.js"></script>
+  </body>
 </html>

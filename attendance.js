@@ -7,7 +7,7 @@
 // // })
 // for (var i=0; i<button.length;i++){
 //     button[i].addEventListener("click",function(){
-        
+
 //     })
 // }
 
@@ -21,23 +21,35 @@
 //         $(this).css("background","green")
 //     // })
 // });
-var present = document.querySelectorAll("#present")
-var absent = document.querySelectorAll("#absent")
+var present = document.querySelectorAll("#present");
+var absent = document.querySelectorAll("#absent");
+var payas = document.getElementById("payas");
+var sushant = document.getElementById("sushant");
+var li = document.querySelectorAll("li");
 
-var li = document.querySelectorAll("li")
+// for (var i = 0; i < li.length; i++) {
+//   present[i].addEventListener("click", function() {
+//     // console.log("present Button Clicked!");
+//     payas.style.backgroundColor = "green";
+//     sushant.style.backgroundColor = "green";
+//   });
+//   absent[i].addEventListener("click", function() {
+//     console.log("absent button clicked");
+//   });
+// }
 
-for(var i=0;i<present.length;i++){
-    
-    present[i].addEventListener("click",function(){
-        console.log("present Button Clicked!")
-     })
-    absent[i].addEventListener("click",function(){
-        console.log("absent button clicked")
-    })         
-    }
+for (var i = 0; i < li.length; i++) {
+  console.log(i);
+  var present = document.querySelectorAll(`#present-${i}`);
+  present.addEventListener("click", function() {
+    //     // console.log("present Button Clicked!");
+    //     payas.style.backgroundColor = "green";
+    present.style.backgroundColor = "green";
+  });
+}
 // $(function(){
 //     $("li").on("click","button",function(){
-        
+
 //         $(this).css("background","green")
 //     })
 // });
