@@ -37,19 +37,27 @@ var li = document.querySelectorAll("li");
 //     console.log("absent button clicked");
 //   });
 // }
+// var present = document.querySelectorAll(`#present-${i}`);
 
-for (var i = 0; i < li.length; i++) {
-  console.log(i);
-  var present = document.querySelectorAll(`#present-${i}`);
-  present.addEventListener("click", function() {
-    //     // console.log("present Button Clicked!");
-    //     payas.style.backgroundColor = "green";
-    present.style.backgroundColor = "green";
-  });
-}
+// for (var i = 0; i < li.length; i++) {
+//   console.log(i);
+
+//   document.getElementById(`present-${i}`).addEventListener("click", function() {
+//     //     // console.log("present Button Clicked!");
+//     //     payas.style.backgroundColor = "green";
+//     present.style.backgroundColor = "green";
+//   });
+// }
 // $(function(){
 //     $("li").on("click","button",function(){
 
 //         $(this).css("background","green")
 //     })
 // });
+
+function green(el) {
+  el.style.backgroundColor = "green ";
+}
+function red(el) {
+  el.style.backgroundColor = "red";
+}
