@@ -29,6 +29,9 @@ ul {
 	padding: 0;
 }
 
-.present1{
-    background-color: greenyellow;
+.classRed{
+    background-color:red;
+}
+.classGreen{
+	background-color: green;
 }
