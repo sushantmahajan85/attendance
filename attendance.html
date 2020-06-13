@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Attendance Manager</title>
-    <link rel="stylesheet" type="text/css" href="attendance.css" />
+    <link rel="stylesheet" type="text/css" href="attendance.css" >
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -29,9 +29,16 @@
           ><button id="absent" onclick="red(this)">absent</button>
         </li>
       </ol>
-      <button>Submit</button>
-      <button>Edit</button>
-      <button>View Attendance</button>
+      <form action="/submit" method="POST">
+        <button>Submit</button>
+      </form>
+      <form action="/edit" method="GET">
+        <button>Edit</button>
+      </form>
+      <form action="/view" method="GET">
+        <button>View Attendance</button>
+      </form>
+      
     </div>
 
     <script type="text/javascript" src="attendance.js"></script>
