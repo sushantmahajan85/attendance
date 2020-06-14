@@ -1,10 +1,10 @@
 var mongoose = require("mongoose");
 
-var teamSchema = new mongoose.Schema({
+var TeamSchema = new mongoose.Schema({
     name: String,
     attendance : Boolean
 });
 
 
-module.exports = mongoose.model("Team",teamSchema);
+module.exports = mongoose.model("Team",TeamSchema);
 

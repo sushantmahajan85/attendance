@@ -1,46 +1,33 @@
 var express  = require("express"),
     app      = express(),
-    mongoose = require("mongoose"),
-    flash    = require("connect-flash"),
-    session  = require("express-session");
-app.use(flash());
+    mongoose = require("mongoose");
+//     flash    = require("connect-flash"),
+//     session  = require("express-session");
+// app.use(flash());
 
-app.use(require("express-session")({
-    secret : "Blah Blah!!",
-    resave : false,
-    saveUninitialized: false
-}));
+// app.use(require("express-session")({
+//     secret : "Blah Blah!!",
+//     resave : false,
+//     saveUninitialized: false
+// }));
 
+var routes = require("./routes/routes.js");
 
-mongoose.connect("mongodb://localhost/team");
+mongoose.connect("mongodb://localhost:27017/tff",{'useNewUrlParser': true},(error)=>{
+    if(!error){
+        console.log("Connection to db successful");
+    }
+    else{
+        console.log("Error connecting to db");
+    }
+});
 
 var Team = require("./models/team.js");
-
-mongoose.set('useUnifiedTopology', true);
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-
 app.use(express.static(__dirname));
 
-app.get("/view",function(req,res){
-    res.sendFile("view.html",{ root: __dirname});
-});
+app.use("/",routes);
 
-app.get("/",function(req,res){
-    res.sendFile("attendance.html",{root:__dirname});
-});
 
-app.post("/submit",function(req,res){
-    //some code here
-    //after adding to db
-    req.flash("success","Attendance Submitted!");
-    res.redirect("/");
-});
-
-app.get("/edit",function(req,res){
-    res.sendFile("edit.html",{root:__dirname});
-});
-
-app.listen(3000,function(){
+app.listen(27017,function(){
     console.log("Server Started!");
 });
