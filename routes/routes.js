@@ -17,6 +17,7 @@ router.get("/",function(req,res){
 
 router.post("/submit",function(req,res){
     //some code here
+    console.log(req.body);
     //after adding to db
     // req.flash("success","Attendance Submitted!");
     res.redirect("/");

@@ -1,9 +1,13 @@
 var express  = require("express"),
     app      = express(),
-    mongoose = require("mongoose");
+    mongoose = require("mongoose"),
+    bodyParser = require("body-parser");
 //     flash    = require("connect-flash"),
 //     session  = require("express-session");
 // app.use(flash());
+
+
+app.use(bodyParser.urlencoded({extended:true}));
 
 // app.use(require("express-session")({
 //     secret : "Blah Blah!!",

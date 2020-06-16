@@ -20,12 +20,12 @@
 //         console.log(button)
 //         $(this).css("background","green")
 //     // })
-// });
-var present = document.querySelectorAll("#present");
-var absent = document.querySelectorAll("#absent");
-var payas = document.getElementById("payas");
-var sushant = document.getElementById("sushant");
-var li = document.querySelectorAll("li");
+// // });
+// var present = document.querySelectorAll("#present");
+// var absent = document.querySelectorAll("#absent");
+// var payas = document.getElementById("payas");
+// var sushant = document.getElementById("sushant");
+// var li = document.querySelectorAll("li");
 
 // for (var i = 0; i < li.length; i++) {
 //   present[i].addEventListener("click", function() {
