@@ -1,22 +1,22 @@
+
+// Including Packages!
 var express  = require("express"),
     app      = express(),
     mongoose = require("mongoose"),
     bodyParser = require("body-parser");
-//     flash    = require("connect-flash"),
-//     session  = require("express-session");
-// app.use(flash());
 
 
 app.use(bodyParser.urlencoded({extended:true}));
 
-// app.use(require("express-session")({
-//     secret : "Blah Blah!!",
-//     resave : false,
-//     saveUninitialized: false
-// }));
 
+// Including Routes!
 var routes = require("./routes/routes.js");
 
+app.use(bodyParser.urlencoded({extended:true}));
+app.set("view engine","ejs");
+app.use(express.static(__dirname+"/public"));
+
+//Connection To Database
 mongoose.connect("mongodb://localhost:27017/tff",{'useNewUrlParser': true},(error)=>{
     if(!error){
         console.log("Connection to db successful");
@@ -26,8 +26,9 @@ mongoose.connect("mongodb://localhost:27017/tff",{'useNewUrlParser': true},(erro
     }
 });
 
+//Including Model
 var Team = require("./models/team.js");
-app.use(express.static(__dirname));
+
 
 app.use("/",routes);
 
