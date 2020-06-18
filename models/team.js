@@ -2,13 +2,13 @@ var mongoose = require("mongoose");
 
 var TeamSchema = new mongoose.Schema({
     Payas : {
-        type: Boolean
+        type: String
     },
     Sushant : {
-        type: Boolean
+        type: String
     },
     Saksham : {
-        type: Boolean
+        type: String
     },
     Date : {
         type : Date,

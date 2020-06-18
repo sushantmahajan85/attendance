@@ -17,7 +17,7 @@ app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
 
 //Connection To Database
-mongoose.connect("mongodb://localhost:27017/tff",{'useNewUrlParser': true},(error)=>{
+mongoose.connect("mongodb+srv://payasjain:Payasjain@21@attendance-9wmmr.mongodb.net/test",{'useNewUrlParser': true},(error)=>{
     if(!error){
         console.log("Connection to db successful");
     }

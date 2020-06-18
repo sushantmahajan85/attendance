@@ -5,5 +5,17 @@
   </head>
   <body>
       <h1>Edit Page</h1>
+      
+      <% attendance.forEach(function(meeting){ %>
+        <h3>Date</h3>
+        <%= meeting.Date%>
+        <h3>EDIT Attendance</h3>
+        Payas       : <%= meeting.Payas %>      <button>Edit</button>
+        <br>
+        Sushant     : <%= meeting.Sushant %>    <button>Edit</button>
+        <br>
+        Saksham     : <%= meeting.Saksham %>    <button>Edit</button>
+        <br>
+      <% }); %>
   </body>
 </html>

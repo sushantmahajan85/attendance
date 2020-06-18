@@ -6,9 +6,6 @@ var router = express.Router()
 var Team = require("../models/team");
 
 
-router.get("/view",function(req,res){
-    res.render("view");
-});
 
 router.get("/",function(req,res){
     res.render("attendance");
@@ -37,6 +34,17 @@ router.post("/submit",function(req,res){
 
 router.get("/edit",function(req,res){
     res.render("edit");
+});
+
+router.get("/view", function(req, res){
+    // Get all campgrounds from DB
+    Team.find({}, function(err, allAttendance){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("view",{attendance:allAttendance});
+       }
+    });
 });
 
 module.exports = router;
