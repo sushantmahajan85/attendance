@@ -33,7 +33,13 @@ router.post("/submit",function(req,res){
 });
 
 router.get("/edit",function(req,res){
-    res.render("edit");
+    Team.find({}, function(err, allAttendance){
+        if(err){
+            console.log(err);
+        } else {
+           res.render("edit",{attendance:allAttendance});
+        }
+     });
 });
 
 router.get("/view", function(req, res){
