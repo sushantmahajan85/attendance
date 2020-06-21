@@ -14,6 +14,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 //Connection To Database
+<<<<<<< HEAD
 mongoose.connect(
   "mongodb://localhost:27017/tff",
   { useNewUrlParser: true },
@@ -22,6 +23,14 @@ mongoose.connect(
       console.log("Connection to db successful");
     } else {
       console.log("Error connecting to db");
+=======
+mongoose.connect("mongodb+srv://payasjain:Payasjain@21@attendance-9wmmr.mongodb.net/test",{'useNewUrlParser': true},(error)=>{
+    if(!error){
+        console.log("Connection to db successful");
+    }
+    else{
+        console.log("Error connecting to db");
+>>>>>>> a45e4f8ce5210473f9b1df38f3519fcb15b41abc
     }
   }
 );
