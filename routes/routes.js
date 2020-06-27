@@ -43,12 +43,23 @@ router.get("/edit",function(req,res){
 });
 
 router.get("/view", function(req, res){
-    // Get all campgrounds from DB
+    
     Team.find({}, function(err, allAttendance){
        if(err){
            console.log(err);
        } else {
           res.render("view",{attendance:allAttendance});
+       }
+    });
+});
+
+router.put("/edit/:id", function(req, res){
+    
+    Team.findByIdAndUpdate(req.params.id, req.body, function(err, updatedatt){
+       if(err){
+           res.redirect("/");
+       } else {
+           console.log(err);
        }
     });
 });
