@@ -4,20 +4,24 @@
     <title>Attendance Manager</title>
   </head>
   <body>
-    <%var total_payas =0, total_saksham =0, total_sushant=0%>
+    <%var total_payas =0, total_saksham =0, total_sushant=0, total_meetings=0%>
     <h1>View Page</h1>
     <% for( var meeting of attendance ) { %> <% if(meeting.Payas=="Present"){ %>
     <%total_payas = total_payas+1 %> <%}%> <% if(meeting.Sushant=="Present"){ %>
     <%total_sushant = total_sushant+1 %> <%}%> <%
     if(meeting.Saksham=="Present"){ %> <%total_saksham = total_saksham+1 %>
-    <%}%> <% } %>
+    <%}%> <% total_meetings = total_meetings+1%> <% } %>
     <h3>Total Attendance</h3>
+    <!--<h4 style="display: inline;">Total meetings</h4>-->
     <br />
     Payas : <%= total_payas %>
+    <!-- <%= total_meetings%> -->
     <br />
     Sushant : <%= total_sushant %>
+    <!-- <%= total_meetings%> -->
     <br />
     Saksham : <%= total_saksham %>
+    <!-- <%= total_meetings%> -->
     <br />
   </body>
 </html>
