@@ -38,9 +38,7 @@ router.get("/edit", function(req, res) {
   });
 });
 
-<<<<<<< HEAD
 router.get("/view", function(req, res) {
-  // Get all campgrounds from DB
   Team.find({}, function(err, allAttendance) {
     if (err) {
       console.log(err);
@@ -50,29 +48,14 @@ router.get("/view", function(req, res) {
   });
 });
 
-module.exports = router;
-=======
-router.get("/view", function(req, res){
-    
-    Team.find({}, function(err, allAttendance){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("view",{attendance:allAttendance});
-       }
-    });
-});
-
-router.put("/edit/:id", function(req, res){
-    
-    Team.findByIdAndUpdate(req.params.id, req.body, function(err, updatedatt){
-       if(err){
-           res.redirect("/");
-       } else {
-           console.log(err);
-       }
-    });
+router.put("/edit/:id", function(req, res) {
+  Team.findByIdAndUpdate(req.params.id, req.body, function(err, updatedatt) {
+    if (err) {
+      res.redirect("/");
+    } else {
+      console.log(err);
+    }
+  });
 });
 
 module.exports = router;
->>>>>>> 0f680196d918b2d4ba859715731d795b0315e293
