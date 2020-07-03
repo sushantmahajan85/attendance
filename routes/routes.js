@@ -48,8 +48,11 @@ router.get("/view", function(req, res) {
   });
 });
 
-router.put("/edit/:id", function(req, res) {
-  Team.findByIdAndUpdate(req.params.id, req.body, function(err, updatedatt) {
+router.post("/edit/:id", function(req, res) {
+  Team.findByIdAndUpdate(req.params.id, req.body.meeting, function(
+    err,
+    updatedatt
+  ) {
     if (err) {
       res.redirect("/");
     } else {
