@@ -7,9 +7,10 @@
   <body>
       <h1>Edit Page</h1>
       
-      <%= attendance.forEach(function(meeting){ %>
+      <% attendance.forEach(function(meeting){ %>
         <br>
-        <h3 style="display: inline;">Date</h3>   : <%= meeting.Date.toDateString().split(' ').slice(0,3).join(' ')   %>
+        
+        <h3 style="display: inline;">Date</h3>   : <% <%=meeting.Date%>.toDateString().split(' ').slice(0,3).join(' ')   %>
         <h3>EDIT Attendance</h3>
         <form action = "/edit/<%=meeting._id%>?_method=PUT" method = "POST">
           Payas    :
@@ -20,7 +21,7 @@
           <%}%>
           <% else{ %>
             <label for="present">Present</label>
-            <input id="present"type="radio" name="payas" value="Present">
+            <input id="present"type="radio" name="payas" value="Present"> <!--comment-->
           <%}%>
 
           <% if(<%= meeting.Payas %> =="Absent"){%>
