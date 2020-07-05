@@ -14,7 +14,7 @@ router.post("/submit", function(req, res) {
   var payas = req.body.payas;
   var sushant = req.body.sushant;
   var saksham = req.body.saksham;
-
+  console.log(req.body);
   var newAtd = { Payas: payas, Sushant: sushant, Saksham: saksham };
   Team.create(newAtd, function(err, newattendance) {
     if (err) {
@@ -48,18 +48,20 @@ router.get("/view", function(req, res) {
   });
 });
 
-router.put("/:id", function(req, res) {
-    console.log(req.body.meeting)
-  Team.findByIdAndUpdate(req.params.id, req.body.meeting, function(
-    err,
-    updatedatt
-  ) {
-    if (!err) {
-      res.redirect("/");
-    } else {
-      console.log(err);
+router.put("/:id", async function(req, res) {
+  console.log(req.params.id);
+  const updated = await Team.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    function(err, updatedatt) {
+      if (!err) {
+        res.redirect("/");
+      } else {
+        console.log(err);
+      }
     }
-  });
+  );
+  console.log(updated);
 });
 
 module.exports = router;
