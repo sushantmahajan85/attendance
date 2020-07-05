@@ -2,6 +2,7 @@
 var express = require("express"),
   app = express(),
   mongoose = require("mongoose"),
+  methodOverride = require('method-override'),
   bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,6 +12,7 @@ var routes = require("./routes/routes.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 
 //Connection To Database
