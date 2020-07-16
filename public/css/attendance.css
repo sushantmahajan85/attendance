@@ -1,16 +1,17 @@
 #container {
 	width: 560px;
 	margin: 250px auto;
-	background:black;
+	background-color: #ffffff;
 	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
 }
 body{
-    background-image: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg);
+	padding: 0;
+	margin: 0;
+	background-color: #E1E0E0;
 }
 li {
 	height: 40px;
-	line-height: 40px;
-	color: white;
+	line-height: 20px;
 	margin-left: 5px;
 }
 h1 {
@@ -21,17 +22,50 @@ h1 {
 	text-transform: uppercase;
 	font-size: 24px;
     font-weight: normal;
-    text-align: center;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
 }
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+input[type="radio"]{
+	opacity: 0;
+  position: fixed;
+  width: 0; 
+}
+label.present{
+	border: 1px solid #01cc65;
+	border-radius: 3px;
+	color: #01cc65;
+	padding: 2px;
+	
+	
 }
 
-.classRed{
-    background-color:red;
+label.absent{
+	border: 1px solid #F82F2F;
+	border-radius: 3px;
+	color: #F82F2F;
+	padding: 2px;
+	
 }
-.classGreen{
-	background-color: green;
+label{
+	font-family: 'Poppins',sans-serif;
+	font-size: small;
+}
+ input#present:checked +label.present{
+	background-color: #01cc65 ;
+	color: white;
+}
+
+input#absent:checked +label.absent{
+	background-color: #F82F2F ;
+	color: white;
+}
+
+input[type="radio"]:checked + label{
+	background-color: #bfb;
+	border-color: #4c4;
+	color: #06b130;
+}
+form{
+	display: inline;
+	margin-left: 10px;
 }

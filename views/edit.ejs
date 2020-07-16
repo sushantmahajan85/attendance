@@ -2,19 +2,24 @@
 <html>
   <head>
     <title>Attendance Manager</title>
+    <link rel="stylesheet" type="text/css" href="/css/attendance.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
   </head>
   <body>
     <h1>Edit Page</h1>
     <% for( var meeting of attendance ) { %>
     <br />
-    <h3 style="display: inline;">Date</h3>
+    <h5 style="display: inline;">Date : </h5>
     <%= meeting.Date.toDateString().split(' ').slice(0,3).join(' ')%>
-    <h3>EDIT Attendance</h3>
+
+    <br>
     <form action="/<%=meeting._id%>?_method=PUT" method="POST">
       <ol>
         <li>
           Payas : <% if (meeting.Payas=="Present") { %>
-          <label for="present">Present</label>
+          <label for="present" class="present">Present</label>
           <input
             id="present"
             type="radio"
@@ -24,25 +29,25 @@
           />
 
           <% } else { %>
-          <label for="present">Present</label>
+          <label for="present" class="present">Present</label>
           <input id="present" type="radio" name="Payas" value="Present" />
           <!--comment-->
 
           <% } %> <% if (meeting.Payas=="Absent") { %>
-          <label for="absent">Absent</label>
+          <label for="absent" class="absent">Absent</label>
           <input id="absent" type="radio" name="Payas" value="Absent" checked />
 
           <% } else { %>
-          <label for="absent">Absent</label>
+          <label for="absent" class="absent">Absent</label>
           <input id="absent" type="radio" name="Payas" value="Absent" />
           <!--comment-->
 
           <% } %>
         </li>
         <li>
-          <br />
+          
           Sushant : <% if (meeting.Sushant=="Present") { %>
-          <label for="present">Present</label>
+          <label for="present" class="present">Present</label>
           <input
             id="present"
             type="radio"
@@ -52,12 +57,12 @@
           />
 
           <% } else { %>
-          <label for="present">Present</label>
+          <label for="present" class="present">Present</label>
           <input id="present" type="radio" name="Sushant" value="Present" />
           <!--comment-->
 
           <% } %> <% if (meeting.Sushant=="Absent") { %>
-          <label for="absent">Absent</label>
+          <label for="absent" class="absent">Absent</label>
           <input
             id="absent"
             type="radio"
@@ -67,7 +72,7 @@
           />
 
           <% } else { %>
-          <label for="absent">Absent</label>
+          <label for="absent" class="absent">Absent</label>
           <input id="absent" type="radio" name="Sushant" value="Absent" />
           <!--comment-->
 
@@ -76,7 +81,7 @@
         </li>
         <li>
           Saksham : <% if (meeting.Saksham=="Present") { %>
-          <label for="present">Present</label>
+          <label for="present" class="present">Present</label>
           <input
             id="present"
             type="radio"
@@ -86,12 +91,12 @@
           />
 
           <% } else { %>
-          <label for="present">Present</label>
+          <label for="present" class="present">Present</label>
           <input id="present" type="radio" name="Saksham" value="Present" />
           <!--comment-->
 
           <% } %> <% if (meeting.Saksham=="Absent") { %>
-          <label for="absent">Absent</label>
+          <label for="absent" class="absent">Absent</label>
           <input
             id="absent"
             type="radio"
@@ -101,15 +106,17 @@
           />
 
           <% } else { %>
-          <label for="absent">Absent</label>
+          <label for="absent" class="absent">Absent</label>
           <input id="absent" type="radio" name="Saksham" value="Absent" />
           <!--comment-->
 
           <% } %>
         </li>
       </ol>
-      <br />
-      <button>Submit!</button>
+      
+      <button type="button" class="btn btn-success">Submit</button>
+      <br>
+      <hr>
     </form>
     <% } %>
 

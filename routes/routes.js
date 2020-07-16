@@ -55,9 +55,9 @@ router.put("/:id", async function(req, res) {
     req.body,
     function(err, updatedatt) {
       if (!err) {
-        res.redirect("/");
+        res.redirect("/edit");
       } else {
-        console.log(err);
+        console.log("error");
       }
     }
   );
