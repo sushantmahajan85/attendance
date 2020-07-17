@@ -8,40 +8,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
   <body>
+    <img src="../tff_logo.jpg" >
     <div id="container">
-      <h1>Attendance</h1>
-      <form action="/submit" method="POST">
+      
+      <form action="/submit" class="text-center border border-light p-5" method="POST">
+        <p class="h4 mb-4">Attendance</p>
         <ol>
           <li class="member">
-            Payas Jain
-
+          Payas Jain
+            <div class="labels">
             <label for="present" class="present" >Present</label>
-            <input id="present" type="radio" name="payas" value="Present" />
-
+            <input id="present"  type="radio" name="payas" value="Present" />
             <label for="absent" class="absent" >Absent</label>
-            <input id="absent" type="radio" name="payas" value="Absent" />
-          </li>
+            <input id="absent"  type="radio" name="payas" value="Absent" />
+            </div>
+          </li>  
           <li class="member">
             Sushant Mahajan
-            <label for="present" class="present" >Present</label>
-            <input id="present" type="radio" name="sushant" value="Present" />
-            <label for="absent" class="absent" >Absent</label>
-            <input id="absent" type="radio" name="sushant" value="Absent" />
+            <div class="labels">
+              <label for="present"  class="present" >Present</label>
+              <input id="present"  type="radio" name="sushant" value="Present" />
+              <label for="absent"  class="absent" >Absent</label>
+              <input id="absent"  type="radio" name="sushant" value="Absent" />
+            </div>
           </li>
+
           <li class="member">
             Saksham Jain
-            <label for="present" class="present" >Present</label>
-            <input id="present" type="radio" name="saksham" value="Present" />
-            <label for="absent" class="absent" >Absent</label>
-            <input id="absent" type="radio" name="saksham" value="Absent" />
+          <div class="labels">
+            <label for="present"   class="present" >Present</label>
+            <input id="present"   type="radio" name="saksham" value="Present" />
+            <label for="absent"  class="absent" >Absent</label>
+            <input id="absent"   type="radio" name="saksham" value="Absent" />
+          </div>
           </li>
         </ol>
-        <button type="button" class="btn btn-success">Submit</button>
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Submit</button>
       </form>
-      <a type="button" class="btn btn-danger" href="/edit">Edit</button>
-      <a type="button" class="btn btn-info" href="/view">View Attendance</button>
+      <a type="button" class="btn btn-outline-danger" href="/edit">Edit</button>
+      <a type="button" class="btn btn-outline-success" href="/view">View Attendance</button>
       
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     </body>
     </html>

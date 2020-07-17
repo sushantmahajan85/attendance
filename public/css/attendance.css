@@ -1,71 +1,39 @@
-#container {
+ #container {
 	width: 560px;
-	margin: 250px auto;
+	margin: 300px auto;
 	background-color: #ffffff;
 	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
 }
+
 body{
 	padding: 0;
 	margin: 0;
-	background-color: #E1E0E0;
+	background: rgb(150,69,204);
+background: linear-gradient(90deg, rgba(150,69,204,0.9923319669664741) 15%, rgba(255,76,76,1) 50%, rgba(163,255,100,1) 100%);
+
+}
+ol{
+	text-align: left;
+	list-style-type: disc;
+	display: inline;
+	
 }
 li {
-	height: 40px;
-	line-height: 20px;
-	margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-h1 {
-	background: black;
-	color: white;
-	margin: 0;
-	padding: 10px 20px;
-	text-transform: uppercase;
-	font-size: 24px;
-    font-weight: normal;
-	text-align: center;
-	font-family: 'Source Sans Pro', sans-serif;
-}
-input[type="radio"]{
-	opacity: 0;
-  position: fixed;
-  width: 0; 
-}
-label.present{
-	border: 1px solid #01cc65;
-	border-radius: 3px;
-	color: #01cc65;
-	padding: 2px;
-	
-	
-}
-
-label.absent{
-	border: 1px solid #F82F2F;
-	border-radius: 3px;
-	color: #F82F2F;
-	padding: 2px;
-	
-}
-label{
-	font-family: 'Poppins',sans-serif;
-	font-size: small;
-}
- input#present:checked +label.present{
-	background-color: #01cc65 ;
-	color: white;
-}
-
-input#absent:checked +label.absent{
-	background-color: #F82F2F ;
-	color: white;
-}
-
-input[type="radio"]:checked + label{
-	background-color: #bfb;
-	border-color: #4c4;
-	color: #06b130;
-}
-form{
-	display: inline;
+a{
 	margin-left: 10px;
+	margin-bottom: 20px;
+}
+img{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+		/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+
 }
