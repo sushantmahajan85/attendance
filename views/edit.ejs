@@ -2,124 +2,133 @@
 <html>
   <head>
     <title>Attendance Manager</title>
-    <link rel="stylesheet" type="text/css" href="/css/attendance.css" />
+    <link rel="stylesheet" type="text/css" href="/css/edit.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
-  </head>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Proza+Libre:ital@1&display=swap" rel="stylesheet">  </head>
   <body>
-    <h1>Edit Page</h1>
+  
+    
     <% for( var meeting of attendance ) { %>
-    <br />
-    <h5 style="display: inline;">Date : </h5>
-    <%= meeting.Date.toDateString().split(' ').slice(0,3).join(' ')%>
+    
+    <p class="h5 Date"  style="display: inline-block; width: 100%;">Date : <%= meeting.Date.toDateString().split(' ').slice(1,3).join(' ')%> , <%= meeting.Date.toDateString().split(' ')[0] %> </p>
+    
 
-    <br>
-    <form action="/<%=meeting._id%>?_method=PUT" method="POST">
+    
+    <form action="/<%=meeting._id%>?_method=PUT" class="text-center  p-5" method="POST">
+      <p class="h4 mb-4 heading">Edit Attendance</p>
       <ol>
         <li>
-          Payas : <% if (meeting.Payas=="Present") { %>
-          <label for="present" class="present">Present</label>
-          <input
-            id="present"
-            type="radio"
-            name="Payas"
-            value="Present"
-            checked
-          />
+          Payas : 
+          <div class="labels">
+            <% if (meeting.Payas=="Present") { %>
+            <label for="present" class="present">Present</label>
+            <input
+              id="present"
+              type="radio"
+              name="Payas"
+              value="Present"
+              checked
+            />
 
-          <% } else { %>
-          <label for="present" class="present">Present</label>
-          <input id="present" type="radio" name="Payas" value="Present" />
-          <!--comment-->
+            <% } else { %>
+            <label for="present" class="present">Present</label>
+            <input id="present" type="radio" name="Payas" value="Present" />
+            <!--comment-->
 
-          <% } %> <% if (meeting.Payas=="Absent") { %>
-          <label for="absent" class="absent">Absent</label>
-          <input id="absent" type="radio" name="Payas" value="Absent" checked />
+            <% } %> <% if (meeting.Payas=="Absent") { %>
+            <label for="absent" class="absent">Absent</label>
+            <input id="absent" type="radio" name="Payas" value="Absent" checked />
 
-          <% } else { %>
-          <label for="absent" class="absent">Absent</label>
-          <input id="absent" type="radio" name="Payas" value="Absent" />
-          <!--comment-->
+            <% } else { %>
+            <label for="absent" class="absent">Absent</label>
+            <input id="absent" type="radio" name="Payas" value="Absent" />
+            <!--comment-->
 
-          <% } %>
+            <% } %>
+          </div>
         </li>
         <li>
-          
-          Sushant : <% if (meeting.Sushant=="Present") { %>
-          <label for="present" class="present">Present</label>
-          <input
-            id="present"
-            type="radio"
-            name="Sushant"
-            value="Present"
-            checked
-          />
+          Sushant : 
+          <div class="labels">
+            <% if (meeting.Sushant=="Present") { %>
+            <label for="present" class="present">Present</label>
+            <input
+              id="present"
+              type="radio"
+              name="Sushant"
+              value="Present"
+              checked
+            />
 
-          <% } else { %>
-          <label for="present" class="present">Present</label>
-          <input id="present" type="radio" name="Sushant" value="Present" />
-          <!--comment-->
+            <% } else { %>
+            <label for="present" class="present">Present</label>
+            <input id="present" type="radio" name="Sushant" value="Present" />
+            <!--comment-->
 
-          <% } %> <% if (meeting.Sushant=="Absent") { %>
-          <label for="absent" class="absent">Absent</label>
-          <input
-            id="absent"
-            type="radio"
-            name="Sushant"
-            value="Absent"
-            checked
-          />
+            <% } %> <% if (meeting.Sushant=="Absent") { %>
+            <label for="absent" class="absent">Absent</label>
+            <input
+              id="absent"
+              type="radio"
+              name="Sushant"
+              value="Absent"
+              checked
+            />
 
-          <% } else { %>
-          <label for="absent" class="absent">Absent</label>
-          <input id="absent" type="radio" name="Sushant" value="Absent" />
-          <!--comment-->
+            <% } else { %>
+            <label for="absent" class="absent">Absent</label>
+            <input id="absent" type="radio" name="Sushant" value="Absent" />
+            <!--comment-->
 
-          <% } %>
-          <br />
+            <% } %>
+            
+          </div>
         </li>
         <li>
-          Saksham : <% if (meeting.Saksham=="Present") { %>
-          <label for="present" class="present">Present</label>
-          <input
-            id="present"
-            type="radio"
-            name="Saksham"
-            value="Present"
-            checked
-          />
+          Saksham : 
+          <div class="labels">
+            <% if (meeting.Saksham=="Present") { %>
+            <label for="present" class="present">Present</label>
+            <input
+              id="present"
+              type="radio"
+              name="Saksham"
+              value="Present"
+              checked
+            />
 
-          <% } else { %>
-          <label for="present" class="present">Present</label>
-          <input id="present" type="radio" name="Saksham" value="Present" />
-          <!--comment-->
+            <% } else { %>
+            <label for="present" class="present">Present</label>
+            <input id="present" type="radio" name="Saksham" value="Present" />
+            <!--comment-->
 
-          <% } %> <% if (meeting.Saksham=="Absent") { %>
-          <label for="absent" class="absent">Absent</label>
-          <input
-            id="absent"
-            type="radio"
-            name="Saksham"
-            value="Absent"
-            checked
-          />
+            <% } %> <% if (meeting.Saksham=="Absent") { %>
+            <label for="absent" class="absent">Absent</label>
+            <input
+              id="absent"
+              type="radio"
+              name="Saksham"
+              value="Absent"
+              checked
+            />
 
-          <% } else { %>
-          <label for="absent" class="absent">Absent</label>
-          <input id="absent" type="radio" name="Saksham" value="Absent" />
-          <!--comment-->
-
-          <% } %>
+            <% } else { %>
+            <label for="absent" class="absent">Absent</label>
+            <input id="absent" type="radio" name="Saksham" value="Absent" />
+            <!--comment-->
+            <% } %>
+          </div>
         </li>
       </ol>
       
-      <button type="button" class="btn btn-success">Submit</button>
-      <br>
-      <hr>
+      <button class="btn btn-success btn-rounded my-4 waves-effect z-depth-0" type="submit">Submit</button>
+      
+      
     </form>
     <% } %>
-
-    <script type="text/javascript" src="/css/edit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
   </body>
 </html>

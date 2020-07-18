@@ -16,6 +16,7 @@ ol{
 	text-align: left;
 	list-style-type: disc;
 	display: inline;
+	font-family: 'Lato', sans-serif;
 	
 }
 li {
@@ -36,4 +37,7 @@ img{
 		/* bring your own prefixes */
 	transform: translate(-50%, -50%);
 
+}
+p{
+	font-family: 'Proza Libre', sans-serif;
 }

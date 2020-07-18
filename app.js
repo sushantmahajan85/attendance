@@ -17,13 +17,13 @@ app.use(express.static(__dirname + "/public"));
 
 //Connection To Database
 mongoose.connect(
-  "mongodb+srv://payasjain:<Payasjain@21>@attendance-9wmmr.mongodb.net/test",
+  "mongodb+srv://payasjain:Payasjain@21@attendance-9wmmr.mongodb.net/test",
   { useNewUrlParser: true, useUnifiedTopology : true },
   (error) => {
     if (!error) {
       console.log("Connection to db successful");
     } else {
-      console.log("Error connecting to db");
+      console.log(error);
     }
   }
 );
