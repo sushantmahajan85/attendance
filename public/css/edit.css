@@ -2,11 +2,10 @@
 body{
 	padding: 0;
 	margin: 0;
-	background: linear-gradient(270deg, #FF0B5D 0%, #650BFF 100%)
+	background-image: linear-gradient(to right top, #8E2DE2, #4A00E0);
 }
 ol{
 	text-align: left;
-	list-style-type: disc;
     display: inline;
     color: white;
     font-family: 'Lato', sans-serif;
@@ -29,5 +28,11 @@ a{
     background-color: white ;
     padding: 12px;
     font-family: 'Noto Sans', sans-serif;
+    display: inline-block;
+    width: 100%;
 }
-
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

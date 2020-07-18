@@ -1,4 +1,4 @@
- #container {
+#container {
 	width: 560px;
 	margin: 300px auto;
 	background-color: #ffffff;
@@ -11,6 +11,7 @@ body{
 	background-image: linear-gradient(to right top, #5433FF, #20BDFF, #A5FECB);
 
 }
+
 ol{
 	text-align: left;
 	list-style-type: disc;
@@ -23,20 +24,14 @@ li {
     justify-content:space-between;
     align-items: center;
 }
-a{
-	margin-left: 10px;
-	margin-bottom: 20px;
-}
-img{
-	width: 200px;
-	height: 200px;
-	position: absolute;
-	top: 25%;
-	left: 50%;
-		/* bring your own prefixes */
-	transform: translate(-50%, -50%);
-
-}
 p{
-	font-family: 'Proza Libre', sans-serif;
+    font-family: 'Proza Libre', sans-serif;
+    display: inline-block;
+}
+
+.red{
+    color: red;
+}
+.green{
+    color: green;
 }
