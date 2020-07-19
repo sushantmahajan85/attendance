@@ -8,6 +8,7 @@
     
   </head>
   <body>
+    
     <%var total_payas =0, total_saksham =0, total_sushant=0, total_meetings=0%>
     
     <% for( var meeting of attendance ) { %> <% if(meeting.Payas=="Present"){ %>
@@ -15,12 +16,11 @@
     <%total_sushant = total_sushant+1 %> <%}%> <%
     if(meeting.Saksham=="Present"){ %> <%total_saksham = total_saksham+1 %>
     <%}%> <% total_meetings = total_meetings+1%> <% } %>
-    
-
-
 
     <div id="container" class="text-center border border-light p-5">
-      <p class="h4 mb-4">Total Attendance</p>
+      <div id="heading">Total Attendance</div>
+
+      <hr>
     <!--<h4 style="display: inline;">Total meetings</h4>-->
     <ol>
       <li class="member">
@@ -67,9 +67,13 @@
         </div>
       </li>
     </ol>
-
-      
+    <div class="buttons">
+      <a href="/" class="btn btn-dark btn-rounded">Submit New Attendance</a>
+      <a href="/edit" class="btn btn-danger btn-rounded">Edit Attendance</a>    
     </div>
+    
+    </div>
+    
     <br />
   </body>
 </html>
