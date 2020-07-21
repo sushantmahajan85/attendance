@@ -16,62 +16,63 @@
     <%total_sushant = total_sushant+1 %> <%}%> <%
     if(meeting.Saksham=="Present"){ %> <%total_saksham = total_saksham+1 %>
     <%}%> <% total_meetings = total_meetings+1%> <% } %>
+    <div class="row">
+      <div id="container" class="text-center border border-light p-5 col-lg-5 col-md-8" >
+        <div id="heading">Total Attendance</div>
 
-    <div id="container" class="text-center border border-light p-5">
-      <div id="heading">Total Attendance</div>
+        <hr>
+      <!--<h4 style="display: inline;">Total meetings</h4>-->
+      <ol>
+        <li class="member">
+        Payas Jain
+        <div class="labels">
+          <% if((total_payas/total_meetings)*100 > 75){ %>
+            <div class="green">
+              <%= ((total_payas/total_meetings)*100).toFixed(2) %>
+            </div>
+          <%}else{%>
+            <div class="red">
+              <%= ((total_payas/total_meetings)*100).toFixed(2) %>
+            </div>
+        <% } %> 
+        </div>
+        </li>  
+        <li class="member">
+          Sushant Mahajan
+          <div class="labels">
+            <% if((total_sushant/total_meetings)*100 > 75){ %>
+              <div class="green">
+                <%= ((total_sushant/total_meetings)*100).toFixed(2) %>
+              </div>
+            <%}else{%>
+              <div class="red">
+                <%= ((total_sushant/total_meetings)*100).toFixed(2) %>
+              </div>
+          <% } %> 
+          </div>
+        </li>
 
-      <hr>
-    <!--<h4 style="display: inline;">Total meetings</h4>-->
-    <ol>
-      <li class="member">
-      Payas Jain
-      <div class="labels">
-        <% if((total_payas/total_meetings)*100 > 75){ %>
-          <div class="green">
-            <%= ((total_payas/total_meetings)*100).toFixed(2) %>
+        <li class="member">
+          Saksham Jain 
+          <div class="labels">
+            <% if((total_saksham/total_meetings)*100 > 75){ %>
+              <div class="green">
+                <%= ((total_saksham/total_meetings)*100).toFixed(2) %>
+              </div>
+            <%}else{%>
+              <div class="red">
+                <%= ((total_saksham/total_meetings)*100).toFixed(2) %>
+              </div>
+          <% } %> 
           </div>
-        <%}else{%>
-          <div class="red">
-            <%= ((total_payas/total_meetings)*100).toFixed(2) %>
-          </div>
-       <% } %> 
+        </li>
+      </ol>
+      <div class="buttons">
+        <a href="/" class="btn btn-dark btn-rounded">Submit New Attendance</a>
+        <a href="/edit" class="btn btn-danger btn-rounded">Edit Attendance</a>    
       </div>
-      </li>  
-      <li class="member">
-        Sushant Mahajan
-        <div class="labels">
-          <% if((total_sushant/total_meetings)*100 > 75){ %>
-            <div class="green">
-              <%= ((total_sushant/total_meetings)*100).toFixed(2) %>
-            </div>
-          <%}else{%>
-            <div class="red">
-              <%= ((total_sushant/total_meetings)*100).toFixed(2) %>
-            </div>
-         <% } %> 
-        </div>
-      </li>
-
-      <li class="member">
-        Saksham Jain 
-        <div class="labels">
-          <% if((total_saksham/total_meetings)*100 > 75){ %>
-            <div class="green">
-              <%= ((total_saksham/total_meetings)*100).toFixed(2) %>
-            </div>
-          <%}else{%>
-            <div class="red">
-              <%= ((total_saksham/total_meetings)*100).toFixed(2) %>
-            </div>
-         <% } %> 
-        </div>
-      </li>
-    </ol>
-    <div class="buttons">
-      <a href="/" class="btn btn-dark btn-rounded">Submit New Attendance</a>
-      <a href="/edit" class="btn btn-danger btn-rounded">Edit Attendance</a>    
-    </div>
-    
+      
+      </div>
     </div>
     
     <br />
