@@ -47,6 +47,9 @@ router.get("/view", function(req, res) {
     }
   });
 });
+router.get("/attendance",function(req,res){
+  res.render("attendance");
+})
 
 router.put("/:id", async function(req, res) {
   console.log(req.params.id);

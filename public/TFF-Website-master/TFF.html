@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OUR EVENTS</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {  
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color:rgb(2,2,48);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color:inherit;
+  width:50%;
+  color:rgba(2,1,38,1));
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color:rgb(169,168,179);
+  border: 4px solid rgb(2,2,48);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color::#FF9F;
+  position: relative;
+  border-radius: 6px;
+}
+
+.content:hover{
+  border-color:yellow;
+  border-width:5px;
+  font-size:20px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  color:rgb(169,168,179);
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent ;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.zoom{
+	 border: 4px solid rgb(2,2,48);
+}
+.rectangle {
+  height: auto;
+  width: 100%;
+ background-image:url("BG7.png");
+  font-size: 50px;
+   text-align:center;
+   color:white;
+   font-family:Simplifica; 
+}
+.date:p{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  color:white;
+	}
+</style>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 11, 2019 16:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</head>
+<body >	
+<div class="rectangle"><br><p>HELLO! WELCOME TO THE EVENTS PAGE OF<br>THAPAR FOOD FESTIVAL<br>MAIN DAY COUNTDOWN</p><p id="demo"></p><br></div>
+<div class="timeline">
+	<div>
+  <div class="container left">
+    <div class="content">
+      <h2>DESERT BAZAAR</h2>
+      <p>For all those who having a sweet tooth, Thapar Food Festival brings Dessert Bazaar its first prefest event. This festival will bring you an exotic variety of desserts from all over the world. From Kolkata's Roshogulla to Rajasthan's Ghevar to even France's Macaroons, TFF will have it all at one place. Dessert Bazzar will be first of it's kind where the attendees will experience a collection of different desserts on their plates and savour an assortment of these desserts. The students will be exposed to a whole new world of sweetness and joy.</p>
+    </div>
+  </div>
+  <img src="DB2.jpg" class="zoom" style="float:right;width:20%;margin-top:-280px;border-radius:50%;position:relative;">
+  <img src="DB1.jpg" class="zoom" style="float:right;width:20%;margin-top:-280px;margin-right:280px;border-radius:50%;position:relative;">
+</div>
+<div>
+  <div class="container right">
+     <div class="content">
+      <h2>ORIENTATION</h2>
+      <p>XXXLife can be quite boring if laughter is missing and laughter comes with humour. And hence humour is a basic necessity of life just like food. And comedy along with food i.e. two necessities altogether is a deadly combo. So we bring to you an evening 'food comedy' with some best comedy stars of canvas laugh club, that will make you laugh hard and kick out all your stress and we will surely kick out your snack hunger.</p>
+    </div>
+  </div>
+   <img src="OR1.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="OR2.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;margin-left:280px;border-radius:50%;position:relative;">
+</div>
+<div>
+  <div class="container left">
+    <div class="content">
+      <h2>COOK OFF</h2>
+      <p>    Thapar Food Festival announces it’s ever so long awaited and unexcelled event, Dine Out  in collaboration with Restaurants names. This is your opportunity to get dazzled in more ways than one with all the new people you have met at college! An unforgettable spectacle with unlimited free foods is guaranteed to leave a lasting impression on all who are lucky enough to get passes! Accept no Limitations!
+#ThaparFoodFestival</p>
+    </div>
+  </div>
+  <img src="CO1.jpg" class="zoom" style="float:right;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="CO2.jpg" class="zoom" style="float:right;width:20%;margin-top:-250px;margin-right:280px;border-radius:50%;position:relative;">
+</div>
+<div>
+  <div class="container right">
+    <div class="content">
+      <h2>MOVIE EVE</h2>
+      <p>Its a great saying that fruits are a pleasure that you can plead for. Sweet, salty, sour-these are only some handpicked of versatile flavours fruits offer. To make you experience this delicious infinity, Thapar Food Festival has come up with The Fruit Festival. An event comprising of endless lines of colourful,  attractive and tasty fruits from around the globe, presented in form of carefully created dishes that you can never imagine. So, come and let the foodie in you find heaven at this delectable festival.</p>
+    </div>
+  </div>
+
+ <img src="ME1.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="ME2.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;margin-left:280px;border-radius:50%;position:relative;">
+
+</div>
+<div>
+  <div class="container left">
+    <div class="content">
+      <h2>DINE OUT</h2>
+      <p>Thapar Food Festival announces it’s ever so long awaited and unexcelled event, Dine Out  in collaboration with Restaurants names. This is your opportunity to get dazzled in more ways than one with all the new people you have met at college! An unforgettable spectacle with unlimited free foods is guaranteed to leave a lasting impression on all who are lucky enough to get passes! Accept no Limitations!</p>
+    </div>
+</div>
+<img src="DO1.jpg" class="zoom" style="float:right;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="DO2.jpg" class="zoom" style="float:right;width:20%;margin-top:-250px;margin-right:280px;border-radius:50%;position:relative;">
+  </div>
+  <div>
+  <div class="container right">
+    <div class="content">
+      <h2>MAN VS FOOD</h2>
+      <p>For every foodie around, it's time to show your obsession with food , it's time to push your appetite ! Because this time it's not Big; it's huge ! Thapar Food Fest 2019 Presents most anticipated event awaited by every voracious eater ! MAN Vs FOOD. Prove your competence , Come to fight against food , Come to take up a challenge ! 
+Desire  , Compete , Win lots of grand prizes</p>
+    </div>
+</div>
+     <img src="MV1.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="MV2.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;margin-left:280px;border-radius:50%;position:relative;"> 
+  </div>
+
+<div>
+  <div class="container left">
+    <div class="content">
+      <h2>INDUSTRIAL TOUR</h2>
+      <p>Life can be quite boring if laughter is missing and laughter comes with humour. And hence humour is a basic necessity of life just like food. And comedy along with food i.e. two necessities altogether is a deadly combo. So we bring to you an evening 'food comedy' with some best comedy stars of canvas laugh club, that will make you laugh hard and kick out all your stress and we will surely kick out your snack hunger.</p>
+    </div>
+</div>
+    <img src="IT1.jpg" class="zoom" style="float:right;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="IT2.jpg" class="zoom" style="float:right;width:20%;margin-top:-250px;margin-right:280px;border-radius:50%;position:relative;">
+
+</div>
+<div>
+  <div class="container right">
+    <div class="content">
+      <h2>MAIN DAY</h2>
+      <p>Missing local food ?Ever been mesmirized by the concept of food trucks. So here's a surprise for all you food lovers  , presenting Food Truck , the next event of TFF '19 where hot and lip smacking food prepared in food trucks will be served to all food enthusiasts</p>
+    </div> 
+  </div>
+<img src="MD1.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;border-radius:50%;position:relative;">
+  <img src="MD2.jpg" class="zoom" style="float:left;width:20%;margin-top:-250px;margin-left:280px;border-radius:50%;position:relative;"> 
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146468970-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146468970-1');
+</script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="sass/css/icon-font.css">
+        <link rel="stylesheet" href="sass/css/linea.css">
+        <link rel="stylesheet" href="sass/css/style.css">
+        
+        <link rel="stylesheet" href="TFF.html">
+        <link rel="shortcut icon" type="image/png" href="sass/img/favicon.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Campaign</title>
+    </head>
+<body>
+        <section class="campaign">
+            <div class="campaign_content">
+            <div class="campaign_left">
+                <h1 class="heading-secondary" style="margin: 2rem 3rem"> campaign</h1>
+                <p class="paragraph" style="margin-left: 3rem; text-align: center; font-size: 1.7rem; color:white; text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.589)">Come to main cafeteria to submit the used bottles and win exciting free food coupons.</p>
+                <input id="backend-name" type="text" placeholder="name">
+                <input id="backend-rollNumber" type="text" placeholder="roll no">
+                <input id="backend-number" type="text" placeholder="number of bottles">
+                <button id="backend_btn" onclick="postOnBackend()"> SUBMIT </button>
+                <script src="backend.js"></script>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
