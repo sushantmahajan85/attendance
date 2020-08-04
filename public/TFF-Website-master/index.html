@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="sass/css/icon-font.css">
         <link rel="stylesheet" href="sass/css/linea.css">
         <link rel="stylesheet" href="sass/css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146468970-1"></script>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -105,7 +106,7 @@ $(".loader_wrapper").fadeOut("slow");
         </header>
         <main>
             <section class="section-about" id="section-about">
-                <div class="u-centre">
+                <div class="u-centre" data-aos="fade-right">
                 <h2 class="heading-secondary">
                      about us
                 </h2>
@@ -133,45 +134,54 @@ $(".loader_wrapper").fadeOut("slow");
                 <div class="row">
                 <div class="col-1-of-4">
                 
-               <a href="#popup7"> <div class="section_box_1" data-aos="fade-up">
+               <a href="#popup7"> 
+                <div data-aos="fade-up">   
+                <div class="section_box_1" >
+                   
                     <i class="section_icon icon-basic-world"></i>
 
                     <h3 class="heading-main-small">TITLE SPONSOR</h3>
                     <p class="section_text">Title Sponsor is the most vital element in every magnificient fest. It plays a very important role and helps the organizing team in presenting the fest to the audience.<span class="yellow" style="display: block">Click To Explore</span></p>
-                
+                </div>
                 </div>
               </a>
                 </div>
                    <div class="col-1-of-4">
                 
-                  <a href="#popup8">  <div class="section_box_2" data-aos="fade-up">
+                  <a href="#popup8">
+                    <div data-aos="fade-up"> 
+                       <div class="section_box_2" >
                         <i class="section_icon icon-basic-pin1"></i>
     
                         <h3 class="heading-main-small">POWER SPONSOR</h3>
                         <p class="section_text">Power Sponsor provides the soul to a fest and acts  like a backbone for the fest. It strengthens the fest and provides a experience that is witnessed never before.<span class="yellow " style="display: block">Click To Explore</span></p>
-                    
+                       </div>
                     </div>
                 </a>
                     </div>
                     <div class="col-1-of-4">
                 
-                    <a href="#popup9">    <div class="section_box_3" data-aos="zoom-in">
+                    <a href="#popup9"> 
+                        <div data-aos="fade-up">
+                           <div class="section_box_3" >
                             <i class="section_icon icon-basic-clock"></i>
         
                             <h3 class="heading-main-small">CO-SPONSORS</h3>
                             <p class="section_text">Co-Sponsor is like a guiding light for the organizing team. It assists the team at each footstep and leaves no stone unturned to extend the limit to sky.<span class="yellow"style="display: block">Click To Explore</span></p>
-                        
+                        </div>
                         </div>
                     </a>
                         </div>
                         <div class="col-1-of-4">
                 
-                          <a href="#popup6">                        <div class="section_box_4" data-aos="fade-up">
+                          <a href="#popup6">                        
+                            <div data-aos="fade-up">  
+                            <div class="section_box_4" >
                                 <i class="section_icon icon-basic-pin2"></i>
             
                        <div class="box_text">         <h3 class="heading-main-small">ASSOCIATE SPONSORS</h3>
                                 <p class="section_text">Associate Sponsor, works in association with the organizing team and gives a new direction to the fest. It tries to excell the dimension in which it deals.<span class="yellow" style="display: block">Click To Explore</span></p></div>
-                            
+                            </div>
                             </div>
                             </a>
                             </div>
@@ -183,11 +193,14 @@ $(".loader_wrapper").fadeOut("slow");
                 </div>
                 <div class="row team_section-paragraph" style="width: 80%"><p>Memories are treasures one will always preserve. One may not live a moment again, but can remember and cherish it forever. Memoreies are windows to the past that allow one to jump into that momentous joy and rekive it again. Thapar Food Festival is a joy of many and has always created a plethora of memories, that cherish this unique concoction of food,fun and satisfaction. 
                     Music, Art, Dance, Sweet, Sour-our bag is a mixture of all emotions.<span class="yellow"> Below are glimpse of the same:</span></p></div>
-                <div class="row">
-                   <a href="2016.html"class="col-1-of-3  square-box-2"> </a>
-                    <a href="2017.html"class="col-1-of-3  square-box-1" id="square-box-1"></a>
-                    <a href="2018.html"class="col-1-of-3 square-box-3"></a>
+                <div data-aos="fade-up">
+                    <div class="row">
+                        <a href="2016.html" class="col-1-of-3  square-box-2"> </a>
+                        <a href="2017.html"class="col-1-of-3  square-box-1" id="square-box-1"></a>
+                        <a href="2018.html"class="col-1-of-3 square-box-3"></a>                    
                     </div>
+                </div>        
+
             </section>
 
 
@@ -441,9 +454,14 @@ $(".loader_wrapper").fadeOut("slow");
                           <noscript><img height="1" width="1" style="display:none"
                             src="https://www.facebook.com/tr?id=907170169616450&ev=PageView&noscript=1"
                           /></noscript>
-                          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-                          <script>
-                            AOS.init();
-                          </script>
+                        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                        <script>   
+                            AOS.init({
+                            easing: 'ease-out-back',
+                            duration: 1200,
+                            
+                            disable: 'mobile'
+                            });
+                        </script>
                         </body>
 </html>
