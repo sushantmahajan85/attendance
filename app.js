@@ -28,9 +28,10 @@ mongoose.connect(
   }
 );
 
+
 //Including Model
 var Team = require("./models/team.js");
-
+var Recruit = require("./models/recruit.js");
 app.use("/", routes);
 
 app.listen(27017, function() {
