@@ -33,21 +33,16 @@
 	padding: 0px; 
 	box-sizing: border-box;
 }
+.bg-contact100 {
+  width: 100%;  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 body, html {
 	height: 100%;
-  font-family: Poppins-Regular, sans-serif;
-  
-    /* The image used */
-    background-image: url(../images/cool-background.png);
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+  font-family: Poppins-Regular, sans-serif;  
 }
 
 /*---------------------------------------------*/
@@ -169,9 +164,23 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: transparent;
-  position: relative;
-  z-index: 1;
+  background: rgba(0,0,0,0.7);
+}
+
+.wrap-contact100 {
+  width: 1163px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 110px 130px 157px 148px;
 }
 
 .contact100-map {
@@ -183,13 +192,6 @@ iframe {
   left: 0;
 }
 
-.wrap-contact100 {
-  width: 670px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
 
 /*==================================================================
 [ Title form ]*/

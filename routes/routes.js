@@ -5,6 +5,7 @@ var path = require("path");
 var router = express.Router();
 var Team = require("../models/team");
 const recruit = require("../models/recruit");
+const { check, validationResult } = require("express-validator");
 
 router.get("/attendance", function(req, res) {
   res.render("attendance");
@@ -28,18 +29,30 @@ router.post("/submit", function(req, res) {
   // req.flash("success","Attendance Submitted!");
 });
 
-router.post("/recsubmit",function(req,res){
-   recruit.create(req.body.data,function(err,newdetails){
-     if(err){
-       res.redirect("/");
-     }
-     else{
-       res.redirect("/recruit");
-     }
-   })
-});
+
 router.get("/recruit",function(req,res){
-  res.render("recruit");
+  res.render("recruit",{errors:""});
+});
+router.post("/recsubmit",[ 
+  check('data[phone]',"Must be a length 0f 10").isLength({min:10,max:10}),
+  check("data[CG]","Please Enter Valid details").isLength({max:10})
+  ],function(req,res){
+    var errors = validationResult(req);
+    if(errors){
+      res.render("recruit",{errors:errors.mapped()});
+    }
+    else{
+      console.log(req.body.data);
+      recruit.create(req.body.data,function(err,newdetails){
+        if(err){
+          console.log(err);
+          res.redirect("/recruit");
+        }
+        else{
+          res.redirect("/");
+        }
+      })
+    }
 });
 
 

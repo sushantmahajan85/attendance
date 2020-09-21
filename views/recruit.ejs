@@ -29,58 +29,126 @@
 </head>
 <body>
 
-
-	<div class="container-contact100">
+<div class="bg-contact100" style="background-image: url('images/bg-01.jpg');">
+	
+		<div class="container-contact100">
+			<div class="wrap-contact100">
 		<!-- <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div> -->
-		<div class="image">
-		</div>
-		<div class="wrap-contact100">
-			<div class="contact100-form-title" style="background-image: url(images/bg-01.jpg);">
-				<span class="contact100-form-title-1">
-					Contact Us
-				</span>
-
-				<span class="contact100-form-title-2">
-					Feel free to drop us a line below!
-				</span>
-			</div>
-
-			<form class="contact100-form validate-form" action="/recsubmit" method="POST">
-				<div class="wrap-input100 validate-input" data-validate="Name is required">
-					<span class="label-input100">Full Name:</span>
-					<input class="input100" type="text" name="data[name]" placeholder="Enter full name">
-					<span class="focus-input100"></span>
+				<div class="image">
 				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<span class="label-input100">Email:</span>
-					<input class="input100" type="text" name="data[email]" placeholder="Enter email addess">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate="Phone is required">
-					<span class="label-input100">Phone:</span>
-					<input class="input100" type="text" name="data[phone]" placeholder="Enter phone number">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Message is required">
-					<span class="label-input100">Message:</span>
-					<textarea class="input100" name="data[message]" placeholder="Your Comment..."></textarea>
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
-							Submit
-							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+				<div class="wrap-contact100">
+					<div class="contact100-form-title" style="background-image: url(images/bg-01.jpg);">
+						<span class="contact100-form-title-1">
+							Recruitment form
 						</span>
-					</button>
+
+						<span class="contact100-form-title-2">
+							Welcome To TFF
+						</span>
+					</div>
+
+					<form class="contact100-form validate-form" action="/recsubmit" method="POST">
+						<div class="wrap-input100 validate-input" data-validate="Name is required">
+							<span class="label-input100">Thapar aapko kis naam se jaanta hai?
+							</span>
+							<input class="input100" type="text" name="data[name]" placeholder="Enter full name">
+							<span class="focus-input100"></span>
+							
+						</div>
+
+						<div class="wrap-input100 validate-input" >
+							<span class="label-input100">Dear</span>
+							<br>
+							<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+							<label for="male" class="radio100" >Male</label>
+							<input id="male"  type="radio" name="data[gender]" value="Male" />
+							<label for="female" class="radio100" >Female</label>
+							<input id="female"  type="radio" name="data[gender]" value="Female" />
+							<span class="focus-input100"></span>
+							
+
+						</div>
+						<!-- <% if(errors['data.email']){%>
+							<%=errors['data.email'].msg%>
+						<%}%> -->
+						<div class="wrap-input100 validate-input" data-validate="Roll No is required">
+							<span class="label-input100">Proxy kis number pe lagvate ho?</span>
+							<input class="input100" type="text" name="data[roll]" placeholder="Enter Roll Number">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Name is required">
+							<span class="label-input100">विशेषज्ञता kisme paa rhe ho?</span>
+							<input class="input100" type="text" name="data[branch]" placeholder="Enter Branch">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="CG is required">
+							<span class="label-input100">अभियांत्रिकी में क्या grade चल रहा है?</span>
+							<input class="input100" type="text" name="data[CG]" placeholder="Enter CG">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Phone is required">
+							<span class="label-input100">Aapko khushkhabri kis number pe sunayein?</span>
+							<input class="input100" type="text" name="data[phone]" placeholder="Enter phone number">
+							<span class="focus-input100"></span>
+						</div>
+						<div class="errors">
+							<% if(errors['data.phone']){%>
+								<%=errors['data.phone'].msg%>
+							<%}%>
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">Kahan ke rehne vaale ho?</span>
+							<input class="input100" type="text" name="data[place]" placeholder="Enter City">
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">How much time can you devote for TFF?</span>
+							<input class="input100" type="text" name="data[timeDevote]" placeholder="Enter time you can devote">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">What societies have you been a part of?</span>
+							<input class="input100" type="text" name="data[otherSocities]" placeholder="Enter Socities">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">How do you like spending your free time?</span>
+							<input class="input100" type="text" name="data[Hobbies]" placeholder="Enter Your Hobbies!">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">When I make/eat ____, I always add ____ to make it taste even better.</span>
+							<input class="input100" type="text" name="data[food]" placeholder="">
+							<span class="focus-input100"></span>
+							
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate = "Message is required">
+							<span class="label-input100">Views about TFF'19.</span>
+							<textarea class="input100" name="data[message]" placeholder="Your Comment..."></textarea>
+							<span class="focus-input100"></span>
+						</div>
+
+						<div class="container-contact100-form-btn">
+							<button class="contact100-form-btn">
+								<span>
+									Submit
+									<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+								</span>
+							</button>
+						</div>
+					</form>
 				</div>
-			</form>
+			</div>
 		</div>
-	</div>
+		
+</div>
 
 
 
