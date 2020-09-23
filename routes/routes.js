@@ -32,13 +32,14 @@ router.post("/submit", function(req, res) {
 
 router.get("/recruit",function(req,res){
   res.render("recruit",{errors:""});
-});
-router.post("/recsubmit",[ 
-  check('data[phone]',"Must be a length 0f 10").isLength({min:10,max:10}),
-  check("data[CG]","Please Enter Valid details").isLength({max:10})
-  ],function(req,res){
+ });
+router.post("/recsubmit",[check('data[phone]',"Must be a length 0f 10").isLength({min:10,max:10})
+],function(req,res){
+
+  
     var errors = validationResult(req);
-    if(errors){
+    console.log(errors);
+    if(!errors.isEmpty()){
       res.render("recruit",{errors:errors.mapped()});
     }
     else{

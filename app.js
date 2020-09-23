@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
-
 //Connection To Database
 mongoose.connect(
   "mongodb+srv://payasjain:Payasjain@21@attendance-9wmmr.mongodb.net/test",
