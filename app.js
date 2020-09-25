@@ -4,7 +4,8 @@ var express = require("express"),
   mongoose = require("mongoose"),
   methodOverride = require('method-override'),
   bodyParser = require("body-parser"),
-  {check,validationResult} = require("express-validator");
+  {check,validationResult} = require("express-validator"),
+  apiroutes = require("../attendance/routes/apiroutes");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -34,6 +35,7 @@ mongoose.connect(
 var Team = require("./models/team.js");
 var Recruit = require("./models/recruit.js");
 app.use("/", routes);
+app.use("/",apiroutes);
 
 app.listen(27017, function() {
   console.log("Server Started!");

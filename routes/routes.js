@@ -35,8 +35,6 @@ router.get("/recruit",function(req,res){
  });
 router.post("/recsubmit",[check('data[phone]',"Must be a length 0f 10").isLength({min:10,max:10})
 ],function(req,res){
-
-  
     var errors = validationResult(req);
     console.log(errors);
     if(!errors.isEmpty()){
