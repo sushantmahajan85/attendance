@@ -53,7 +53,6 @@
 							</span>
 							<input class="input100" type="text" name="data[name]" id="name" placeholder="Enter full name">
 							<span class="focus-input100"></span>
-							
 						</div>
 
 						<div class="wrap-input100 validate-input" >
@@ -65,9 +64,8 @@
 							<label for="female" class="radio100" >Female</label>
 							<input id="female"  type="radio" name="data[gender]" id="gender" value="Female" />
 							<span class="focus-input100"></span>
-							
-
 						</div>
+
 						<!-- <% if(errors['data.email']){%>
 							<%=errors['data.email'].msg%>
 						<%}%> -->
@@ -83,12 +81,12 @@
 							<span class="focus-input100"></span>
 							
 						</div>
-						<div class="wrap-input100 validate-input" data-validate="CG is required">
+						<!-- <div class="wrap-input100 validate-input" data-validate="CG is required">
 							<span class="label-input100">अभियांत्रिकी में क्या grade चल रहा है?</span>
 							<input class="input100" type="text" name="data[CG]" id="CG" placeholder="Enter CG">
 							<span class="focus-input100"></span>
 							
-						</div>
+						</div> -->
 						<div class="wrap-input100 validate-input" data-validate="Phone is required">
 							<span class="label-input100">Aapko khushkhabri kis number pe sunayein?</span>
 							<input class="input100" type="text" name="data[phone]" id="phone" placeholder="Enter phone number">
@@ -123,8 +121,8 @@
 							
 						</div>
 						<div class="wrap-input100 validate-input" data-validate="Required">
-							<span class="label-input100">When I make/eat ____, I always add ____ to make it taste even better.</span>
-							<input class="input100" type="text" name="data[food]" id="food" placeholder="">
+							<span class="label-input100">Describe yourself in 3 words</span>
+							<input class="input100" type="text" name="data[des]" id="des" placeholder="">
 							<span class="focus-input100"></span>
 							
 						</div>
@@ -134,9 +132,111 @@
 							<textarea class="input100" name="data[message]" id="message" placeholder="Your Comment..."></textarea>
 							<span class="focus-input100"></span>
 						</div>
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">Apni City se kaunsi dish laoge?</span>
+							<input class="input100" type="text" name="data[famous]" id="famous" placeholder="Special Food of your city">
+							<span class="focus-input100"></span>
+							
+						</div>
+						<p style="border-bottom: 1px solid #b2b2b2;">Rate yourself from 1-5
+						</p>
+						<br>
+						
+						<div class="wrap-input100 validate-input" style="border-bottom: none;" >
+							<span class="label-input100">Build & Lead a team</span>
+							<br>
+							<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+							<label for="rating1" class="radio100" >1</label>
+							<input id="rating1"  type="radio" name="data[rateQ1]" id="rateQ1" value="1" />
+							<label for="rating2" class="radio100" >2</label>
+							<input id="rating2"  type="radio" name="data[rateQ1]" id="rateQ1" value="2" />
+							<label for="rating3" class="radio100" >3</label>
+							<input id="rating3"  type="radio" name="data[rateQ1]" id="rateQ1" value="3" />
+							<label for="rating4" class="radio100" >4</label>
+							<input id="rating4"  type="radio" name="data[rateQ1]" id="rateQ1" value="4" />
+							<label for="rating5" class="radio100" >5</label>
+							<input id="rating5"  type="radio" name="data[rateQ1]" id="rateQ1" value="5" />
+							
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input" style="border-bottom: none;">
+							<span class="label-input100">Stay positive under pressure</span>
+							<br>
+							<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+							<label for="rating1" class="radio100" >1</label>
+							<input id="rating1"  type="radio" name="data[rateQ2]" id="rateQ2" value="1" />
+							<label for="rating2" class="radio100" >2</label>
+							<input id="rating2"  type="radio" name="data[rateQ2]" id="rateQ2" value="2" />
+							<label for="rating3" class="radio100" >3</label>
+							<input id="rating3"  type="radio" name="data[rateQ2]" id="rateQ2" value="3" />
+							<label for="rating4" class="radio100" >4</label>
+							<input id="rating4"  type="radio" name="data[rateQ2]" id="rateQ2" value="4" />
+							<label for="rating5" class="radio100" >5</label>
+							<input id="rating5"  type="radio" name="data[rateQ2]" id="rateQ2" value="5" />
+							
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input" style="border-bottom: none;">
+							<span class="label-input100">Proactively reach out & help others</span>
+							<br>
+							<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+							<label for="rating1" class="radio100" >1</label>
+							<input id="rating1"  type="radio" name="data[rateQ3]" id="rateQ3" value="1" />
+							<label for="rating2" class="radio100" >2</label>
+							<input id="rating2"  type="radio" name="data[rateQ3]" id="rateQ3" value="2" />
+							<label for="rating3" class="radio100" >3</label>
+							<input id="rating3"  type="radio" name="data[rateQ3]" id="rateQ3" value="3" />
+							<label for="rating4" class="radio100" >4</label>
+							<input id="rating4"  type="radio" name="data[rateQ3]" id="rateQ3" value="4" />
+							<label for="rating5" class="radio100" >5</label>
+							<input id="rating5"  type="radio" name="data[rateQ3]" id="rateQ3" value="5" />
+							
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input" style="border-bottom: none;">
+							<span class="label-input100">Come up with active solutions</span>
+							<br>
+							<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+							<label for="rating1" class="radio100" >1</label>
+							<input id="rating1"  type="radio" name="data[rateQ4]" id="rateQ4" value="1" />
+							<label for="rating2" class="radio100" >2</label>
+							<input id="rating2"  type="radio" name="data[rateQ4]" id="rateQ4" value="2" />
+							<label for="rating3" class="radio100" >3</label>
+							<input id="rating3"  type="radio" name="data[rateQ4]" id="rateQ4" value="3" />
+							<label for="rating4" class="radio100" >4</label>
+							<input id="rating4"  type="radio" name="data[rateQ4]" id="rateQ4" value="4" />
+							<label for="rating5" class="radio100" >5</label>
+							<input id="rating5"  type="radio" name="data[rateQ4]" id="rateQ4" value="5" />
+							
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input" style="border-bottom: none;">
+							<span class="label-input100">Get things done on time/Punctuality</span>
+							<br>
+							<!-- <input class="input100" type="text" name="data[email]" placeholder="Enter email addess"> -->
+							<label for="rating1" class="radio100" >1</label>
+							<input id="rating1"  type="radio" name="data[rateQ5]" id="rateQ5" value="1" />
+							<label for="rating2" class="radio100" >2</label>
+							<input id="rating2"  type="radio" name="data[rateQ5]" id="rateQ5" value="2" />
+							<label for="rating3" class="radio100" >3</label>
+							<input id="rating3"  type="radio" name="data[rateQ5]" id="rateQ5" value="3" />
+							<label for="rating4" class="radio100" >4</label>
+							<input id="rating4"  type="radio" name="data[rateQ5]" id="rateQ5" value="4" />
+							<label for="rating5" class="radio100" >5</label>
+							<input id="rating5"  type="radio" name="data[rateQ5]" id="rateQ5" value="5" />
+							
+							<span class="focus-input100"></span>
+						</div>
+						
+						<div class="wrap-input100 validate-input" data-validate="Required">
+							<span class="label-input100">What value you can add to TFF?</span>
+							<input class="input100" type="text" name="data[value]" id="value" placeholder="Special Food of your city">
+							<span class="focus-input100"></span>
+							
+						</div>
 
 						<div class="container-contact100-form-btn">
-							<button class="contact100-form-btn" id="submit">
+							<button class="contact100-form-btn" type="submit">
 								<span>
 									Submit
 									<i class="fa fa-long-arrow-right m-l-7"  aria-hidden="true"></i>
@@ -176,7 +276,7 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 <!--===============================================================================================-->
-	<script src="js/recruit.js"></script>
+	<!-- <script src="/js/recruit.js"></script> -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>

@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Including Routes!
 var routes = require("./routes/routes.js");
-
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");

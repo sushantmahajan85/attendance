@@ -13,19 +13,40 @@ var RecruitSchema = new mongoose.Schema({
     gender : {
         type: String
     },
+    rateQ1 : {
+        type: String
+    },
+    rateQ2 : {
+        type: String
+    },
+    rateQ3 : {
+        type: String
+    },
+    rateQ4 : {
+        type: String
+    },
+    rateQ5 : {
+        type: String
+    },
+    value : {
+        type: String   
+    },
     roll : {
         type : Number
     },
     branch : {
         type : String
     },
-    CG : {
-        type: Number
+    // CG : {
+    //     type: Number
+    // },
+    famous : {
+        type: String
     },
     place : {
         type: String
     },
-    food : {
+    des : {
         type: String
     },
     timeDevote : {
